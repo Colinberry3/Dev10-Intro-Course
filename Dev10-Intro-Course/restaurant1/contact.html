@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+Name:Colin Berry
+Date Created:1/2/2020
+Most recent revision:
+-->
+<html lang="en">
+  <head>
+    <title>Contact Us</title>
+  </head>
+
+  <body>
+    <header>
+        <h1>Tables on Skis</h1>
+    </header>
+    <hr />
+    <nav>
+      <p><a href="index.html">Home</a></p>
+      <p><a href="menu.html">Menu</a></p>
+      <p><a href="contact.html">Contact Us</a></p>
+    </nav>
+    <hr />
+      <form action="submit.html" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" /><br />
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" /><br />
+        <label for="phoneNumber">Phone:</label>
+        <input type="text" id="phoneNumber" name="phoneNumber" /><br />
+
+        <label for="reasonForInquiry">Reason for Inquiry:</label>
+        <select id="reasonForInquiry" name="reasonForInquiry">
+          <option value="default" selected>Catering</option>
+          <option value="privateParty">Private Party</option>
+          <option value="feedback">Feedback</option>
+          <option value="other">Other</option>
+        </select><br />
+
+        <label for="info">Additional Information</label>
+        <textarea id="info" name="info"></textarea><br />
+
+        <label for="haveYouBeen">Have you been to the restaurant?</label>
+        <input type="radio" id="no" name="answer" value="NO" checked />
+        <label for="choice1">No</label>
+        <input type="radio" id="yes" name="answer" value="YES" />
+        <label for="choice2">Yes</label><br />
+
+        <label for="dayToContact">Best days to contact you:</label>
+        <input type="checkbox" id="m" name="dayToContact" />
+        <label for="m">M</label>
+        <input type="checkbox" id="t" name="dayToContact" />
+        <label for="t">T</label>
+        <input type="checkbox" id="w" name="dayToContact" />
+        <label for="w">W</label>
+        <input type="checkbox" id="th" name="dayToContact" />
+        <label for="th">Th</label>
+        <input type="checkbox" id="f" name="dayToContact" />
+        <label for="f">F</label><br />
+
+        <input type="submit" name="submit" value="Send Request" /><br />
+
+    <hr />
+    <footer>
+      <p>1458 Main St, Hopkins, Minnesota, 55343</p>
+      <p>(621)888-6785</p>
+    </footer>
+  </body>
+</html>
