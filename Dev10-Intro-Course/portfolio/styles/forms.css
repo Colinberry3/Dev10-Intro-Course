@@ -1,0 +1,48 @@
+/*
+ Created by: Colin Berry
+Date created: 1/3/2020
+Most recent revision:
+*/
+label, fieldset {
+  font-size: 1.1em;
+}
+input[type=text] {
+  border: 2px solid #2D728F;
+  width: 50%;
+  padding: 8px 8px;
+  margin: 12px 0;
+  box-sizing: border-box;
+  font-size 1.1em;
+}
+fieldset {
+  background-color: #FEE9E1;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 12px 0;
+  box-sizing: border-box;
+}
+select, textarea {
+  margin: 12px 0;
+  font-size: 1em;
+}
+input[type=submit] {
+  font-size: 1.2em;
+  background-color: #3B8EA5;
+  color: #FFE8D1;
+  padding: 4px 8px;
+}
+input[type=submit]:hover {
+  background-color: #FEE9E1;
+  color: #3b8ea5;
+}
+textarea {
+  width: 100%;
+  height: 200px;
+  padding: 12px 20px;
+  margin: 12px 0;
+  box-sizing: border-box;
+  border: 2px solid #2D728F;
+  border-radius: 3px;
+  background-color: #fff;
+  resize: none;
+}

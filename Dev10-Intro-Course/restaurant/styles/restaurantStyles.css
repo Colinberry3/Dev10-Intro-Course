@@ -1,0 +1,29 @@
+/*
+Created by:Colin Berry
+Date Created: 1/7/2020
+Most recent revision:
+*/
+/* Color Scheme: #040403 rich black, #88a2aa cadet grey, #e5ece9 platinum, #9a8f97 spanish gray, #e2856e middle red */
+body {
+  background-color: #e5ece9;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+header, footer {
+  background-color: #88a2aa;
+  color: #040403;
+  text-align: center;
+  font-family: fantasy;
+}
+h1 {
+  font-size: 2.4em;
+}
+nav a:visited {
+  color: #e2856e;
+}
+nav a:hover {
+  font-weight: bold;
+}
+nav a:active {
+  text-decoration: none;
+}
