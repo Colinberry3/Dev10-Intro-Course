@@ -2,12 +2,17 @@
 <!--
 Name:Colin Berry
 Date Created:1/2/2020
-Most recent revision: 1/7/2020
+Most recent revision: 1/10/2020
 -->
 <!-- Color Scheme: #040403 rich black, #88a2aa cadet grey, #e5ece9 platinum, #9a8f97 spanish gray, #e2856e middle red -->
 <html lang="en">
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script type="text/javascript" src="scripts/restaurant3.js"></script>
     <title>Contact Us</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css" />
     <style>
       label {
@@ -33,8 +38,8 @@ Most recent revision: 1/7/2020
         margin-left: 10px;
         box-sizing: border-box;
       }
-      input[type=submit] {
-        border: 2px solid #040403;
+      #submitButton {
+        border: 1px solid #040403;
         font-size: 1.2em;
         background-color: #88a2aa;
         color: #e5ece9;
@@ -43,7 +48,8 @@ Most recent revision: 1/7/2020
         margin-bottom: 12px;
         margin-left: 10px;
       }
-      input[type=submit]:hover {
+    #submitButton:hover {
+        border: 1px solid #040403;
         background-color: #e5ece9;
         color: #040403;
       }
@@ -51,62 +57,102 @@ Most recent revision: 1/7/2020
         font-weight: bold;
       }
     </style>
+    <noscript>
+      <div class="error message">
+        <p>This site is best view with JavaScript enabled.</p>
+      </div> <!--Closing noscript -->
+    </noscript>
   </head>
 
   <body>
-    <header>
+    <div class="container-fluid">
+    <header class="jumbotron">
         <h1>Tables on Skis</h1>
+        <h2>We are opening a new location in Hopkins, MN!</h2>
     </header>
+
     <hr />
     <nav>
-      <p><a href="index.html">Home</a></p>
-      <p><a href="menu.html">Menu</a></p>
-      <p><a href="contact.html">Contact Us</a></p>
+      <a class="btn badge-pill" href="index.html"><span class="fas fa-home"></span></a>
+      <a class="btn badge-pill" href="menu.html">Menu</a>
+      <a class="btn badge-pill" href="contact.html">Contact Us</a>
     </nav>
     <hr />
-      <form action="submit.html" method="POST">
+
+    <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="8000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <p>Tables on Skis is opening a new location in Hopkins, MN!</p>
+        </div> <!--Closing out first carousel slide -->
+        <div class="carousel-item">
+          <p>We're rolling out our seasonal menu, with special options for this season!</p>
+        </div> <!--Closing out second carousel slide -->
+        <div class="carousel-item">
+          <p>The Drink of the Month is SG Special Brew!</p>
+        </div> <!--Closing out third carousel slide -->
+      </div> <!--Closing out class=carousel-inner -->
+    </div><!--Closing out carousel parent -->
+
+    <div class="col-lg-9 col-md-6">
+      <div class="form-group">
+      <form name="restaurant" onsubmit="return validateForm();" onreset="resetForm();">
         <label for="name" class="required">Name:</label>
         <input type="text" id="name" name="name" /><br />
         <label for="email" class="required">Email:</label>
         <input type="text" id="email" name="email" /><br />
         <label for="phoneNumber" class="required">Phone:</label>
         <input type="text" id="phoneNumber" name="phoneNumber" /><br />
+      </div> <!-- Closing out text input form group -->
 
-        <label for="reasonForInquiry" class="required">Reason for Inquiry:</label>
-        <select id="reasonForInquiry" name="reasonForInquiry">
-          <option value="default" selected>Catering</option>
-          <option value="privateParty">Private Party</option>
-          <option value="feedback">Feedback</option>
-          <option value="other">Other</option>
-        </select><br />
+        <div class="form-group">
+          <label for="reasonForInquiry" class="required">Reason for Inquiry:</label>
+          <select id="reasonForInquiry" name="reasonForInquiry">
+            <option value="default" selected>Catering</option>
+            <option value="privateParty">Private Party</option>
+            <option value="feedback">Feedback</option>
+            <option value="other">Other</option>
+          </select><br />
+        </div> <!--Closing out reason for inquiry form group -->
 
-        <label for="info">Additional Information:</label><br />
-        <textarea id="info" name="info"></textarea><br />
+        <div class="form-group">
+          <label for="info">Additional Information:</label><br />
+          <textarea id="info" name="info"></textarea><br />
+        </div> <!--Clsoing out additional info -->
 
-        <label for="haveYouBeen">Have you been to the restaurant?</label>
-        <input type="radio" id="no" name="answer" value="NO" checked />
-        <label for="choice1">No</label>
-        <input type="radio" id="yes" name="answer" value="YES" />
-        <label for="choice2">Yes</label><br />
 
-        <label for="dayToContact" class="required">Best days to contact you:</label>
-        <input type="checkbox" id="m" name="dayToContact" />
-        <label for="m">M</label>
-        <input type="checkbox" id="t" name="dayToContact" />
-        <label for="t">T</label>
-        <input type="checkbox" id="w" name="dayToContact" />
-        <label for="w">W</label>
-        <input type="checkbox" id="th" name="dayToContact" />
-        <label for="th">Th</label>
-        <input type="checkbox" id="f" name="dayToContact" />
-        <label for="f">F</label><br />
+        <div class="form-group">
+          <label for="haveYouBeen">Have you been to the restaurant?</label>
+          <input class="ml-1" type="radio" id="no" name="answer" value="NO" checked />
+          <label class="mr-3" for="choice1">No</label>
+          <input class="mr-1" type="radio" id="yes" name="answer" value="YES" />
+          <label class="mr-1" for="choice2">Yes</label><br />
+        </div> <!--Closing out radio div -->
 
-        <input type="submit" name="submit" value="Send Request" /><br />
 
+        <div class="form-group">
+          <label for="dayToContact">Best days to contact you:</label>
+          <input class="ml-1" type="checkbox" id="m" name="dayToContact" />
+          <label class="mr-3" for="m">M</label>
+          <input class="ml-1" type="checkbox" id="t" name="dayToContact" />
+          <label class="mr-3" for="t">T</label>
+          <input class="ml-1" type="checkbox" id="w" name="dayToContact" />
+          <label class="mr-3" for="w">W</label>
+          <input class="ml-1" type="checkbox" id="th" name="dayToContact" />
+          <label class="mr-3" for="th">Th</label>
+          <input class="ml-1" type="checkbox" id="f" name="dayToContact" />
+          <label class="mr-3" for="f">F</label><br />
+        </div> <!--Closing out checklist div -->
+
+        <button id="submitButton" class="btn btn-default" type="submit" name="submit">Send Request</button><br />
+      </div> <!--Closing out grid system -->
     <hr />
     <footer>
       <p>1458 Main St, Hopkins, Minnesota, 55343</p>
       <p>(621)888-6785</p>
     </footer>
+  </div> <!--Closing out class="container" -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   </body>
 </html>
